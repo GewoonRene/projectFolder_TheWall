@@ -8,42 +8,64 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" type="text/css" href="styles/homepage.css">
-    <title>Homepage</title>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles/uploadImage.css">
+    <title>Image Upload</title>
 </head>
 <body>
-    <form method="post" action="homepage.php" enctype="multipart/form-data"><br>
-        <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
-        <input type="file" name="image">
 
-        <br><br><label>Title:</label>
-        <input type="text" name="title">
+    <!-- HEADER -->
+    <div class="logo">
+        <a href="index.php"><img id="logo" src="media/images/LOGO.jpg"></a> </div>
 
-        <br><br><label>Description:</label>
-        <textarea name="description" placeholder="Voer hier uw text toe."></textarea>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">User_name
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">My Profile</a>
+                <a href="uploadImage.php">Image Upload</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+    <a href="#news">Feed</a>
+    <a href="homepage.php">Homepage</a>
+    </div>
 
-        <br><br><input type="submit" name="submit" value="Upload image">
-    </form>
 
-    <?php
-    $_FILES['image']['title'];
-    $_FILES['image']['MAX_FILE_SIZE'];
-    $_FILES['image']['tmp_name'];
-    $_FILES['image']['error'];
+    <hr class="style14">
 
-    if(isset($_POST['submit'])) {
-        $dbc = mysqli_connect('localhost', 'root', '', '24649_db') or die('### Error Connecting ###');
-        $description = mysqli_real_escape_string($dbc,trim($_POST['description']));
+    <!-- BODY -->
 
-        $temp = $_FILES['image']['tmp_name'];
-        $target = 'images/' . time() . $_FILES['image']['name'];
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Drop or Drag your Image here</h1>
 
-        if (!empty($description)) {
-            if(!move_uploaded_file($temp, $target)) {
-                echo '<br> Gelukt!';
-            }
-        }
-    }
-    ?>
+            <form method="post" action="proces/process_upload.php" enctype="multipart/form-data">
+                <label><img id="upload" src="#" alt="uploaded_image"><br>
+                    <input id="file_upload" type="file" name="uploaded_image"
+                           accept="image/gif, image/jpeg, image/png" onchange="readURL(this);"></label><br><br>
+                <label>Title:
+                    <input name="title:"/></label><br>
+                <label>Description:
+                    <input name="description"/></label><br><br>
+                <input type="submit" name="submit_image" value="Image Uploaden"/>
+            </form>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Upload en deel jouw afbeeldingen</h1>
+        <p>Sleep en plak waar je wilt en start het uploaden van de afbeeldingen direct. 16 MB limiet.</p>
+        <button id="myBtn" type="button">Start Upload</button>
+
+    </div>
+
+<script src="scripts/modaalVenster.js"></script>
+
 </body>
 </html>

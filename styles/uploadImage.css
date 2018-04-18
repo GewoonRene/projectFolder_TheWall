@@ -108,69 +108,17 @@ input[type=text] {
     position: absolute;
 }
 
-/* SLIDESHOW / TRENDING - BANNER
-============================================== */
-.mySlides {display: none}
-
-.mySlides > img {
-    max-height: 750px;
-    overflow: hidden;
+hr.style14 {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    top: 20px;
 }
 
-.banner-slideshow {
-    max-width: 100%;
-    position: relative;
-    margin-bottom: 40px;
-    margin-top: 7px;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-}
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-
-/* CONTENT
-============================================== */
-body, .container {
-    width: 100%;
-    height: 100%;
-    padding: 0 auto;
-    margin: 0 auto;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-}
-
-/* LOGINBOX
+/* POPUP
 ============================================== */
 
 .modal {
@@ -183,7 +131,8 @@ body, .container {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background: rgba(255, 255, 255, 0.8);
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 }
 
 .modal-content {
@@ -191,40 +140,17 @@ body, .container {
     font-family: termina, sans-serif;
     font-style: normal;
     font-weight: 700;
+    text-align: center;
 
+    background-color: #fefefe;
     margin: auto;
     padding: 20px;
-    width: 350px;
-    height: 420px;
-
-    background-color: rgba(114, 114, 114, 0.88);
+    width: 40%;
     border-radius: 2%;
-    color: #FFFFFF;
-}
-
-.modal-content input[type="submit"] {
-    border: none;
-    outline: none;
-    height: 40px;
-    color: #fff;
-    font-size: 16px;
-    background: #ff267e;
-    cursor: pointer;
-    border-radius: 20px;
-}
-
-.user {
-    width: 100px;
-    height: 100px;
-    top: 40px;
-    left: calc(50% - 50px);
-
-    position: absolute;
-    border-radius: 50%;
 }
 
 .close {
-    color: #ffffff;
+    color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -235,4 +161,61 @@ body, .container {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* FILE UPLOAD
+============================================== */
+#upload {
+    margin: 0 auto;
+    padding: 0 auto;
+    height: 300px;
+    width: 400px;
+
+    display: block;
+}
+
+
+/* CONTENT
+============================================== */
+.content {
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 40%;
+
+    text-align: center;
+}
+
+.content > h1 {
+    font-size: 60px ;
+    font-family: termina, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.content > p {
+    font-size: 25px;
+    font-family: termina, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: #727272;
+}
+
+.content > button {
+    font-family: termina, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+
+    margin-top: 10px;
+    padding: 20px;
+    width: 30%;
+
+    font-size: 20px;
+    text-align: center;
+
+    background-color: #9594ff;
+    color: #FFFFFF;
+
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
 }

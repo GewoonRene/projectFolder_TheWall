@@ -13,62 +13,65 @@
     <title>Homepage - 'The Wall'</title>
 </head>
 <body>
-<div class="container">
+    <div class="container">
 
-    <div class="nav">
+        <!-- HEADER -->
 
         <div class="logo">
-        <a href="index.php"><img id="logo" src="media/images/LOGO.jpg"></a> </div>
+            <a href="index.php"><img id="logo" src="media/images/LOGO.jpg"></a> </div>
 
-        <ul class="nav-bar">
+        <div class="navbar">
 
-            <div class="search-container">
-                <form action="searchAction.php">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
+            <div class="dropdown">
+                <button class="dropbtn">User_name
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">My Profile</a>
+                    <a href="uploadImage.php">Image Upload</a>
+                    <a href="#">Settings</a>
+                </div>
             </div>
 
-            <li><a href="index.php">Startpagina</a></li>
-            <li><a href="uploadImage.php">Upload Image</a></li>
-            <li><a href="index.php">Feed</a></li>
-            <li><a href="index.php">User_name</a></li>
-        </ul>
+            <a href="#news">Feed</a>
+            <a href="homepage.php">Homepage</a>
+            <button id="myBtn" type="button">Start Upload</button>
+
+        </div>
+
+        <!-- BODY -->
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <img src="media/images/user.png" class="user">
+                <h2>Log In Here</h2>
+                <form>
+                    <p>Email</p>
+                    <input type="text" name="" placeholder="Enter Email">
+                    <p>Password</p>
+                    <input type="password" name="" placeholder="••••••"><br><br>
+                    <input type="submit" name="" value="Sign In"><br><br>
+                    <a href="#">Forget Password</a>
+                </form>
+            </div>
+        </div>
+
+        <div class="banner-slideshow">
+            <div class="mySlides fade"><img src="media/images/1-4.gif" style="width:100%"></div> <!--PLACEHOLDER-->
+            <div class="mySlides fade"><img src="media/images/2-4.gif" style="width:100%"></div> <!--PLACEHOLDER-->
+            <div class="mySlides fade"><img src="media/images/3-4.gif" style="width:100%"></div> <!--PLACEHOLDER-->
+            <div class="mySlides fade"><img src="media/images/4-4.gif" style="width:100%"></div> <!--PLACEHOLDER-->
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
     </div>
 
-    <div class="banner-slideshow">
-        <div class="mySlides fade"><img src="media/images/1-4.gif" style="width:100%"></div> <!--PLACEHOLDER-->
-        <div class="mySlides fade"><img src="media/images/2-4.gif" style="width:100%"></div> <!--PLACEHOLDER-->
-        <div class="mySlides fade"><img src="media/images/3-4.gif" style="width:100%"></div> <!--PLACEHOLDER-->
-        <div class="mySlides fade"><img src="media/images/4-4.gif" style="width:100%"></div> <!--PLACEHOLDER-->
+    <script src="scripts/slideshow.js"></script>
+    <script src="scripts/modaalVenster.js"></script>
 
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-
-    <div class="grid">
-        <div class="item photo">
-            <img class="photothumb" src="https://www.andybarefoot.com/codepen/images/dogs/dog2.jpg">
-        </div>
-
-        <div class="item photo">
-            <img class="photothumb" src="https://www.andybarefoot.com/codepen/images/dogs/dog2.jpg">
-        </div>
-
-        <div class="item photo">
-            <img class="photothumb" src="https://www.andybarefoot.com/codepen/images/dogs/dog2.jpg">
-        </div>
-
-        <div class="item photo">
-            <img class="photothumb" src="https://www.andybarefoot.com/codepen/images/dogs/dog2.jpg">
-        </div>
-
-        <div class="item photo">
-            <img class="photothumb" src="https://www.andybarefoot.com/codepen/images/dogs/dog2.jpg">
-        </div>
-    </div>
-
-</div>
-<script src="scripts/slideshow.js"></script>
 </body>
 </html>
