@@ -1,11 +1,11 @@
 // =============================================================
 // LOGIN
 const modal = document.getElementById('myModal');
-const btn = document.getElementById('login');
+const myBtn = document.getElementById('myBtn');
 const span = document.getElementsByClassName("close")[0];
 
 // SHOW
-btn.onclick = function() {
+myBtn.onclick = function() {
     modal.style.display = "block";
 };
 
@@ -44,20 +44,3 @@ window.onclick = function(event) {
     }
 };
 
-
-// =============================================================
-// PREVIEW IMAGE
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        let reader = new FileReader();
-
-        reader.onload = function (e) {
-            $('#upload')
-                .attr('src', e.target.result)
-                .width(150)
-                .height(200);
-        };
-
-        reader.readAsDataURL(input.files[0]);
-    }
-}

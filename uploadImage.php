@@ -28,7 +28,7 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <button class="myBtn" id="login" type="button">Login</button>
+                <button class="myBtn" id="myBtn" type="button">Login</button>
                 <button class="myBtn" id="register" type="button">Register</button>
             </div>
         </div>
@@ -48,7 +48,7 @@
             <h1>Drop or Drag your Image here</h1>
 
             <form method="post" action="proces/process_upload.php" enctype="multipart/form-data">
-                <label><img id="upload" src="#" alt="uploaded_image"><br>
+                <label><img id="upload" src="#" alt="Preview Image"><br>
                     <input id="file_upload" type="file" name="uploaded_image"
                            accept="image/gif, image/jpeg, image/png" onchange="readURL(this);"></label><br><br>
                 <label>Title:
@@ -63,11 +63,11 @@
     <div class="content">
         <h1>Upload en deel jouw afbeeldingen</h1>
         <p>Sleep en plak waar je wilt en start het uploaden van de afbeeldingen direct. 16 MB limiet.</p>
-        <button id="myBtn" type="button">Start Upload</button>
+        <button id="upload_btn" type="button">Start Upload</button>
 
     </div>
 
-<script src="scripts/modaalVenster.js"></script>
+<script src="scripts/uploadImage.js"></script>
 
 </body>
 </html>
