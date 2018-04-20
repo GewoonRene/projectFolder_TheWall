@@ -1,0 +1,210 @@
+/* LOGINBOX
+============================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.modal-content {
+    font-size: 20px;
+    font-family: termina, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+
+    margin: auto;
+    padding: 20px;
+    width: 350px;
+    height: 420px;
+
+    background-color: rgba(114, 114, 114, 1);
+    border-radius: 2%;
+    color: #FFFFFF;
+}
+
+.modal-content h2 {
+    margin-top: 25px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.modal-content form {
+    margin: 40px;
+}
+
+.modal-content p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+.modal-content input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#ww {
+    margin-top: 20px;
+}
+
+.modal-content input[type="text"], input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.modal-content input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    background: #ff267e;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.modal-content input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    background: #ff267e;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.modal-content input[type="submit"]:hover {
+    background: #efed40;
+    color: #262626;
+}
+
+.user {
+    width: 100px;
+    height: 100px;
+    top: 40px;
+    left: calc(50% - 50px);
+
+    position: absolute;
+    border-radius: 50%;
+}
+
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#email #password {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px
+}
+
+/* REGISTERBOX
+============================================== */
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.myModal2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 520px;
+    padding: 80px 20px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.5);
+}
+
+.myModal2 p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #fff;
+}
+.myModal2 input
+{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.myModal2 input[type="text"],
+.myModal2 input[type="email"],
+.myModal2 input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.myModal2 input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    background: #ff267e;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.myModal2 input[type="submit"]:hover
+{
+    background: #efed40;
+    color: #262626;
+}
+.myModal2 a
+{
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.close2 {
+    cursor: pointer;
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}

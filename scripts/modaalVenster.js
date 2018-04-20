@@ -1,7 +1,7 @@
 // =============================================================
 // LOGIN
 const modal = document.getElementById('myModal');
-const myBtn = document.getElementById('myBtn');
+const myBtn = document.getElementById('login');
 const span = document.getElementsByClassName("close")[0];
 
 // SHOW
