@@ -11,8 +11,10 @@
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/uploadImage.css">
-    <title>Image Upload</title>
+    <link rel="stylesheet" type="text/css" href="styles/navigation.css">
+    <title>Image Upload  - 'The Wall'</title>
 </head>
 <body>
 
@@ -22,17 +24,17 @@
 
     <div class="navbar">
         <div class="dropdown">
-            <button class="dropbtn">User_name
+            <button class="dropbtn">Username
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#">My Profile</a>
-                <a href="uploadImage.php">Image Upload</a>
-                <a href="#">Settings</a>
+                <button class="myBtn" id="login" type="button">Login</button>
+                <button class="myBtn" id="register" type="button">Register</button>
             </div>
         </div>
-    <a href="#news">Feed</a>
-    <a href="homepage.php">Homepage</a>
+
+        <a href="uploadImage.php">Image Upload</a>
+        <a href="index.php">Homepage</a>
     </div>
 
 

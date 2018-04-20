@@ -8,78 +8,90 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" type="text/css" href="styles/inlogpage.css">
-    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/navigation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Homepage - 'The Wall'</title>
 </head>
 <body>
     <div class="container">
 
-        <div id="popup">
-            <div class="loginBox">
+        <!-- HEADER -->
+
+        <div class="logo">
+            <a href="index.php"><img id="logo" src="media/images/LOGO.jpg"></a> </div>
+
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Username
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <button class="myBtn" id="login" type="button">Login</button>
+                    <button class="myBtn" id="register" type="button">Register</button>
+                </div>
+            </div>
+
+            <a href="uploadImage.php">Image Upload</a>
+            <a href="index.php">Homepage</a>
+        </div>
+
+        <hr class="style14">
+
+        <!-- BODY -->
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
                 <img src="media/images/user.png" class="user">
                 <h2>Log In Here</h2>
                 <form>
                     <p>Email</p>
-                    <input type="text" name="" placeholder="Enter Email">
-                    <p>Password</p>
-                    <input type="password" name="" placeholder="••••••">
-                    <input type="submit" name="" value="Sign In">
-                    <a href="homepage.php">Forget Password</a> <!-- <a> to homepage </a> == PLACEHOLDER -->
+                    <input type="text" name="" placeholder="Enter Email" autofocus>
+                    <p id="ww">Password</p>
+                    <input type="password" name="" placeholder="••••••"><br><br>
+                    <input type="submit" name="" value="Sign In"><br><br>
+                    <a href="#">Forget Password</a>
                 </form>
             </div>
-            <div id="background-popup"></div>
         </div>
 
-
-        <div class="nav">
-
-                <!--<div class="logo">-->
-                    <!--<a href="index.php">LOGO</a> </div>-->
-
-            <ul class="nav-bar">
-
-                <div class="search-container">
-                    <form action="searchAction.php">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
-
-                <li><a href="index.php">Startpagina</a></li>
-                <li><a href="uploadImage.php">Upload Image</a></li>
-                <li><a href="index.php">Feed</a></li>
-                <li><a href="index.php">User_name</a></li>
-            </ul>
+        <div id="myModal2" class="modal">
+            <div class="modal-content">
+                <span class="close2">&times;</span>
+                <img src="media/images/user.png" class="user">
+                <h2>Register Here</h2>
+                <form method="post" action="process_registration.php">
+                    <p>Username<p>
+                        <input type="text" name="username" placeholder="Enter Username">
+                    <p>Email</p>
+                    <input type="email" name="mailadres" placeholder="Enter Email">
+                    <p>Password</p>
+                    <input type="password" name="password" placeholder="••••••">
+                    <p>Confirm Password</p>
+                    <input type="password" name="password_repeat" placeholder="••••••">
+                    <input type="submit" name="submit_registration" value="Sign Up">
+                </form>
+            </div>
         </div>
 
         <div class="banner-slideshow">
-            <div class="mySlides fade"><img src="media/images/1-4.gif" style="width:100%"></div>
-            <div class="mySlides fade"><img src="media/images/2-4.gif" style="width:100%"></div>
-            <div class="mySlides fade"><img src="media/images/3-4.gif" style="width:100%"></div>
-            <div class="mySlides fade"><img src="media/images/4-4.gif" style="width:100%"></div>
+            <div class="mySlides fade"><img src="media/images/1-4.gif" style="width:100%"></div> <!--PLACEHOLDER-->
+            <div class="mySlides fade"><img src="media/images/2-4.gif" style="width:100%"></div> <!--PLACEHOLDER-->
+            <div class="mySlides fade"><img src="media/images/3-4.gif" style="width:100%"></div> <!--PLACEHOLDER-->
+            <div class="mySlides fade"><img src="media/images/4-4.gif" style="width:100%"></div> <!--PLACEHOLDER-->
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
 
-        <div class="masonry">
-            <div class="masonry-layout__panel">
-                <div class="masonry-layout__panel-content">
-                    <!-- IMAGE, TITLE & DESCRIPTION HIERR  -->
-                </div></div>
-            <div class="masonry-layout__panel">
-                <div class="masonry-layout__panel-content">
-                    <!-- IMAGE, TITLE & DESCRIPTION HIERR  -->
-                </div></div>
-            <div class="masonry-layout__panel">
-                <div class="masonry-layout__panel-content">
-                    <!-- IMAGE, TITLE & DESCRIPTION HIERR  -->
-                </div></div>
-        </div>
+        <hr class="style14">
+
     </div>
 
     <script src="scripts/slideshow.js"></script>
-    <script src="scripts/loginScreen.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
+    <script src="scripts/modaalVenster.js" defer></script>
+
 </body>
 </html>
